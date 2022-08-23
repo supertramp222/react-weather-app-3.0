@@ -1,0 +1,33 @@
+.App {
+  margin: 20px auto;
+  max-width: 650px;
+}
+
+.App body {
+  font-family: "Inter", sans-serif;
+}
+
+.App h1 {
+  font-weight: 600;
+  font-size: 128px;
+  line-height: 154.91px;
+  display: inline;
+}
+
+.App h2 {
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 45px;
+}
+
+.App h3 {
+  font-weight: 400;
+  font-size: 30px;
+}
+
+.App p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: rgb(74, 74, 74);
+}

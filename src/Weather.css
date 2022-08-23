@@ -1,0 +1,83 @@
+.Weather .card {
+  border: 2px solid black;
+  border-radius: 0;
+
+  background: radial-gradient(
+    circle at center,
+    rgb(255, 248, 150) 0%,
+    #fbfbfb 60%
+  );
+  background-color: #fbfbfb;
+  background-position: -114px -250px;
+  background-repeat: no-repeat;
+  padding: 10px 5px;
+}
+
+.Weather .weather-description {
+  display: flex;
+  text-transform: capitalize;
+  margin-top: 25px;
+}
+
+.Weather .prediction-container {
+  margin: 150px 0 50px 0;
+}
+
+.Weather .weather-details li {
+  list-style: none;
+}
+
+.Weather .weather-temperature {
+  display: flex;
+  align-items: baseline;
+}
+
+.Weather .weather-description h3 {
+  position: relative;
+  top: 30%;
+  left: 15%;
+}
+
+.Weather .line {
+  padding: 3px;
+  background-color: black;
+  max-width: 100%;
+}
+
+.Weather .form-control {
+  border: solid #000 2px;
+  border-radius: 0;
+  margin-right: 0;
+  padding: 15px;
+}
+
+.Weather .btn-search {
+  border: solid black 2px;
+  background-color: #000;
+  padding: 5px 20px;
+  margin-left: 10px;
+  color: #fff;
+}
+
+.Weather .btn-search:hover {
+  border: solid rgb(68, 68, 68) 2px;
+  background-color: rgb(68, 68, 68);
+  padding: 5px 20px;
+  margin-left: 10px;
+  color: rgb(255, 255, 255);
+}
+
+.Weather .form-control:focus {
+  outline: 5px solid #ffe96dcf;
+  box-shadow: none;
+}
+
+.Weather .weather-forecast {
+  margin-top: 80px;
+}
+
+.weather-details {
+  position: relative;
+  top: 50%;
+  left: 10%;
+}
