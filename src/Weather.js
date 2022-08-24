@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import FormattedDate from "./FormattedDate";
 import "./Weather.css";
 
 export default function Weather(props) {
@@ -14,7 +15,7 @@ export default function Weather(props) {
       city: response.data.name,
       iconUrl: "https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png",
       description: response.data.weather[0].description,
-      date: "Wednesday, 7pm",
+      date: new Date(response.data.dt * 1000),
     });
   }
 
@@ -38,7 +39,9 @@ export default function Weather(props) {
 
             <div className="prediction-container">
               <div className="overview">
-                <p>{weatherData.date}</p>
+                <p>
+                  <FormattedDate date={weatherData.date} />
+                </p>
                 <h2>{weatherData.city}</h2>
               </div>
             </div>
