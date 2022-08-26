@@ -1,3 +1,14 @@
+.Weather h1 {
+  margin-right: 13px;
+}
+.Weather a {
+  color: #000000cf;
+}
+
+.Weather a:hover {
+  color: #ffe96dcf;
+}
+
 .Weather .card {
   border: 2px solid black;
   border-radius: 0;
