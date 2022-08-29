@@ -83,10 +83,6 @@
   box-shadow: none;
 }
 
-.Weather .weather-forecast {
-  margin-top: 80px;
-}
-
 .weather-details {
   position: relative;
   top: 50%;

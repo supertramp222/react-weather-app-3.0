@@ -37,36 +37,11 @@ export default function WeatherInfo(props) {
           <div className="weather-description">
             <div className="col-1">
               <div className="float-left">
-                <WeatherIcon code={props.data.icon} />
+                <WeatherIcon code={props.data.icon} size={90} />
               </div>
             </div>
             <div className="col-11">
               <h3 className="text-capitalize">{props.data.description}</h3>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="weather-forecast">
-        <div className="row">
-          <div className="col-2">
-            <div className="weather-forecast-date">
-              <text>
-                <strong>Thu</strong>
-              </text>
-            </div>
-            <img
-              src="http://openweathermap.org/img/wn/01d@2x.png"
-              alt=""
-              width="42"
-            />
-            <div className="weather-forecast-temperatures">
-              <text>
-                <strong>
-                  <span className="weather-forecast-temperature-max">18°</span>
-                </strong>
-                <span className="weather-forecast-temperature-min">12°</span>
-              </text>
             </div>
           </div>
         </div>
