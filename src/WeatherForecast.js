@@ -21,7 +21,6 @@ export default function WeatherForecast(props) {
   }
 
   function handleResponse(repsonse) {
-    console.log(repsonse.data);
     setForecast(repsonse.data.daily);
     setLoaded(true);
   }
