@@ -16,7 +16,7 @@
   background: radial-gradient(
     circle at center,
     rgb(255, 248, 150) 0%,
-    #fbfbfb 60%
+    #fbfbfb 53%
   );
   background-color: #fbfbfb;
   background-position: -114px -250px;
@@ -30,10 +30,10 @@
   background: radial-gradient(
     circle at center,
     rgb(150, 160, 255) 0%,
-    #fbfbfb 60%
+    #fbfbfb 53%
   );
   background-color: #fbfbfb;
-  background-position: 114px -150px;
+  background-position: 114px -170px;
   background-repeat: no-repeat;
   padding: 40px 32px;
 }
