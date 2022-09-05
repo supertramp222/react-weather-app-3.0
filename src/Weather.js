@@ -24,16 +24,15 @@ export default function Weather(props) {
   }
 
   useEffect(() => {
+    function backGround() {
+      if (weatherData.temperature < 20) {
+        setBackGroundBlue(true);
+      } else {
+        setBackGroundBlue(false);
+      }
+    }
     backGround();
   }, [weatherData.temperature]);
-
-  function backGround() {
-    if (weatherData.temperature < 20) {
-      setBackGroundBlue(true);
-    } else {
-      setBackGroundBlue(false);
-    }
-  }
 
   function search() {
     const apiKey = "6ad09e88b3e793860ef68d84c8bf5d66";
