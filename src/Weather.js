@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import WeatherInfo from "./WeatherInfo";
 import WeatherForecast from "./WeatherForecast";
@@ -7,6 +7,7 @@ import "./Weather.css";
 export default function Weather(props) {
   const [city, setCity] = useState(props.defaultCity);
   const [weatherData, setWeatherData] = useState({ ready: false });
+  const [backGroundBlue, setBackGroundBlue] = useState("");
 
   function handleResponse(response) {
     setWeatherData({
@@ -22,6 +23,18 @@ export default function Weather(props) {
     });
   }
 
+  useEffect(() => {
+    backGround();
+  }, [weatherData.temperature]);
+
+  function backGround() {
+    if (weatherData.temperature < 20) {
+      setBackGroundBlue(true);
+    } else {
+      setBackGroundBlue(false);
+    }
+  }
+
   function search() {
     const apiKey = "6ad09e88b3e793860ef68d84c8bf5d66";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
@@ -31,6 +44,7 @@ export default function Weather(props) {
   function handleSubmit(event) {
     event.preventDefault();
     search();
+    backGround();
   }
 
   function handleCityChange(event) {
@@ -40,7 +54,9 @@ export default function Weather(props) {
   if (weatherData.ready) {
     return (
       <div className="Weather">
-        <div className="card">
+        <div
+          className={backGroundBlue ? "background-blue" : "background-yellow"}
+        >
           <div className="card-body">
             <form className="d-flex" onSubmit={handleSubmit}>
               <input

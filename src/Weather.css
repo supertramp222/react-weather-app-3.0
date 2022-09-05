@@ -9,7 +9,7 @@
   color: #ffe96dcf;
 }
 
-.Weather .card {
+.Weather .background-yellow {
   border: 2px solid black;
   border-radius: 0;
 
@@ -21,7 +21,21 @@
   background-color: #fbfbfb;
   background-position: -114px -250px;
   background-repeat: no-repeat;
-  padding: 10px 5px;
+  padding: 40px 32px;
+}
+
+.Weather .background-blue {
+  border: 2px solid black;
+  border-radius: 0;
+  background: radial-gradient(
+    circle at center,
+    rgb(150, 160, 255) 0%,
+    #fbfbfb 60%
+  );
+  background-color: #fbfbfb;
+  background-position: 114px -150px;
+  background-repeat: no-repeat;
+  padding: 40px 32px;
 }
 
 .Weather .weather-description {
@@ -79,7 +93,7 @@
 }
 
 .Weather .form-control:focus {
-  outline: 5px solid #ffe96dcf;
+  outline: 5px solid #d9cfcfcf;
   box-shadow: none;
 }
 

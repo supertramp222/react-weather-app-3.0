@@ -1,8 +1,23 @@
-import React, { useState } from "react";
+import React from "react";
 
 export default function WeatherTemperature(props) {
-  const [unit, setUnit] = useState("celsius");
+  //If unit ist über 20°C, färbe mir den Background gelb, else blau
+  let temperature = Math.round(props.celsius);
 
+  return (
+    <div>
+      <div className="clearfix weather-temperature">
+        <h1>{temperature}</h1>
+        <span className="temperature ">
+          <h3>°C</h3>
+        </span>
+      </div>
+    </div>
+  );
+}
+
+/*Celsius to Fahrenheit
+  const [unit, setUnit] = useState("celsius");
   function showFahrenheit(event) {
     event.preventDefault();
     setUnit("fahrenheit");
@@ -50,5 +65,4 @@ export default function WeatherTemperature(props) {
         </div>
       </div>
     );
-  }
-}
+  }*/
